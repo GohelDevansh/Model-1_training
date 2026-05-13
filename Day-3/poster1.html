@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoken English Workshop Poster</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#222;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+      font-family:Arial, sans-serif;
+    }
+
+    .poster{
+      width:750px;
+      background:linear-gradient(135deg,#b7e4d7,#d7fff1);
+      border:12px solid white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 0 30px rgba(0,0,0,0.5);
+      position:relative;
+    }
+
+   
+
+    .top{
+      display:grid;
+      grid-template-columns:1.5fr 1fr;
+      padding:30px;
+      gap:20px;
+    }
+
+    .title h1{
+      font-size:78px;
+      line-height:0.9;
+      color:#1f4d3f;
+      font-weight:900;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#1f4d3f;
+      color:white;
+      padding:10px 25px;
+      margin:18px 0;
+      transform:skew(-10deg);
+      font-size:22px;
+      border-radius:5px;
+    }
+
+    .grammar{
+      font-size:58px;
+      font-weight:bold;
+      color:#1f4d3f;
+      letter-spacing:3px;
+    }
+
+  
+
+    .image-box{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .image-box img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+      border:5px solid white;
+    }
+
+
+
+    .badge{
+      margin:0 30px;
+      display:flex;
+      align-items:center;
+      background:white;
+      width:310px;
+      height: 350px;
+      padding:15px;
+      border-radius:20px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .badge .num{
+      font-size:95px;
+      color:#1f4d3f;
+      font-weight:bold;
+      margin-right:15px;
+      line-height:1;
+    }
+
+    .badge .txt{
+      font-size:28px;
+      color:#1f4d3f;
+      font-weight:bold;
+    }
+
+
+
+    .date-box{
+      margin:20px 30px;
+      background:white;
+      border:3px dashed #1f4d3f;
+      border-radius:20px;
+      width:320px;
+      padding:15px;
+      text-align:center;
+      color:#1f4d3f;
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    .date-box small{
+      font-size:18px;
+    }
+
+    
+
+    .content{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:25px;
+      padding:0 30px 30px;
+    }
+
+    .learn{
+      background:rgba(255,255,255,0.7);
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .learn h2{
+      background:#1f4d3f;
+      color:white;
+      text-align:center;
+      padding:12px;
+      margin:-20px -20px 20px;
+      border-radius:15px 15px 0 0;
+      font-size:22px;
+    }
+
+    .learn ul{
+      list-style:none;
+    }
+
+    .learn li{
+      margin:14px 0;
+      font-size:18px;
+      color:#1f4d3f;
+      font-weight:bold;
+    }
+
+    .learn li::before{
+      content:"✔ ";
+      color:#1f4d3f;
+    }
+
+
+
+    .right{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .fees{
+      background:#1f4d3f;
+      color:#ffd54f;
+      text-align:center;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .fees small{
+      color:white;
+      font-size:20px;
+    }
+
+    .fees h1{
+      font-size:60px;
+      margin-top:10px;
+    }
+
+    .certificate{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      border:2px solid #1f4d3f;
+      color:#1f4d3f;
+      font-weight:bold;
+      line-height:1.5;
+    }
+
+   
+
+    .footer{
+      background:#1f4d3f;
+      color:white;
+      padding:20px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .footer h3{
+      font-size:26px;
+    }
+
+    .footer p{
+      font-size:14px;
+      margin-top:5px;
+    }
+
+    .phone{
+      font-size:30px;
+      color:#ffd54f;
+      font-weight:bold;
+    }
+
+    .bottom{
+      text-align:center;
+      background:#ffd54f;
+      color:#1f4d3f;
+      font-size:24px;
+      font-weight:bold;
+      padding:15px;
+      letter-spacing:1px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="poster">
+
+
+    <div class="top">
+
+      <div class="title">
+
+        <h1>SPOKEN<br>ENGLISH</h1>
+
+        <div class="tag">
+          CLASSES WITH
+        </div>
+
+        <div class="grammar">
+          GRAMMAR
+        </div>
+
+      </div>
+
+      <div class="image-box">
+
+        
+         <br>
+        <!-- <img src="download.jpg" alt="Learn English"><br><br> -->
+        <img src="a.png" alt="Learn English">
+
+      </div>
+
+    </div>
+
+
+
+    <div class="badge">
+
+      <div class="num">10</div>
+
+      <div class="txt">
+        DAYS<br>WORKSHOP
+      </div>
+       <img src="a.png" alt="Learn English" class="image-box">
+
+    </div>
+
+  
+
+    <div class="date-box">
+
+      17-05-2026
+      <br>
+      <small>TO</small>
+      <br>
+      27-05-2026
+
+    </div>
+
+
+
+    <div class="content">
+
+      <div class="learn">
+
+        <h2>WHAT YOU WILL LEARN</h2>
+
+        <ul>
+          <li>Speak English Confidently</li>
+          <li>Grammar & Vocabulary</li>
+          <li>Conversation Practice</li>
+          <li>Role Plays & Activities</li>
+          <li>Fluency & Communication Skills</li>
+        </ul>
+
+      </div>
+
+      <div class="right">
+
+        <div class="fees">
+
+          <small>COURSE FEES</small>
+
+          <h1>499/-</h1>
+
+        </div>
+
+        <div class="certificate">
+
+          WITH CERTIFICATION
+          <br><br>
+
+          Certificate will be awarded to all participants.
+
+        </div>
+
+      </div>
+
+    </div>
+
+   
+
+    <div class="footer">
+
+      <div>
+
+        <h3>TRIPURANENI SUJITH</h3>
+
+        <p>ASSISTANT PROFESSOR IN ENGLISH</p>
+
+      </div>
+
+      <div class="phone">
+
+        📞 630355873
+
+      </div>
+
+    </div>
+
+    <div class="bottom">
+
+      REGISTER NOW • LIMITED SEATS AVAILABLE
+
+    </div>
+
+  </div>
+
+</body>
+</html>

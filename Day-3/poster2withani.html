@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spoken English Workshop Poster</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#222;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+      font-family:Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    .poster{
+      width:750px;
+      background:linear-gradient(135deg,#b7e4d7,#d7fff1);
+      border:12px solid white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 0 30px rgba(0,0,0,0.5);
+      position:relative;
+
+      animation:posterFade 1.5s ease;
+      transition:0.5s;
+    }
+
+    .poster:hover{
+      transform:scale(1.01);
+      box-shadow:0 0 45px rgba(255,255,255,0.4);
+    }
+
+    @keyframes posterFade{
+      from{
+        opacity:0;
+        transform:translateY(40px) scale(0.9);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+      }
+    }
+
+    .top{
+      display:grid;
+      grid-template-columns:1.5fr 1fr;
+      padding:30px;
+      gap:20px;
+    }
+
+    .title h1{
+      font-size:78px;
+      line-height:0.9;
+      color:#1f4d3f;
+      font-weight:900;
+
+      animation:slideLeft 1s ease;
+    }
+
+    @keyframes slideLeft{
+      from{
+        opacity:0;
+        transform:translateX(-80px);
+      }
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+    }
+
+    .tag{
+      display:inline-block;
+      background:#1f4d3f;
+      color:white;
+      padding:10px 25px;
+      margin:18px 0;
+      transform:skew(-10deg);
+      font-size:22px;
+      border-radius:5px;
+
+      animation:pulse 2s infinite;
+      transition:0.4s;
+    }
+
+    .tag:hover{
+      background:#14503f;
+      transform:scale(1.05) skew(-10deg);
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1) skew(-10deg);
+      }
+      50%{
+        transform:scale(1.05) skew(-10deg);
+      }
+      100%{
+        transform:scale(1) skew(-10deg);
+      }
+    }
+
+    .grammar{
+      font-size:58px;
+      font-weight:bold;
+      color:#1f4d3f;
+      letter-spacing:3px;
+
+      animation:fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+    .image-box{
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .image-box img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.3);
+      border:5px solid white;
+
+      transition:0.5s;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .image-box img:hover{
+      transform:scale(1.05) rotate(2deg);
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+      100%{
+        transform:translateY(0);
+      }
+    }
+
+    .badge{
+      margin:0 30px;
+      display:flex;
+      align-items:center;
+      background:white;
+      width:310px;
+      height:350px;
+      padding:15px;
+      border-radius:20px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.2);
+
+      transition:0.5s;
+      animation:zoomIn 1.2s ease;
+    }
+
+    .badge:hover{
+      transform:translateY(-8px);
+      box-shadow:0 15px 25px rgba(0,0,0,0.25);
+    }
+
+    @keyframes zoomIn{
+      from{
+        opacity:0;
+        transform:scale(0.7);
+      }
+      to{
+        opacity:1;
+        transform:scale(1);
+      }
+    }
+
+    .badge .num{
+      font-size:95px;
+      color:#1f4d3f;
+      font-weight:bold;
+      margin-right:15px;
+      line-height:1;
+
+      animation:bounce 2s infinite;
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    .badge .txt{
+      font-size:28px;
+      color:#1f4d3f;
+      font-weight:bold;
+    }
+
+    .date-box{
+      margin:20px 30px;
+      background:white;
+      border:3px dashed #1f4d3f;
+      border-radius:20px;
+      width:320px;
+      padding:15px;
+      text-align:center;
+      color:#1f4d3f;
+      font-size:32px;
+      font-weight:bold;
+
+      transition:0.5s;
+      animation:fadeUp 1.5s ease;
+    }
+
+    .date-box:hover{
+      transform:scale(1.05);
+      background:#f8fffc;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .date-box small{
+      font-size:18px;
+    }
+
+    .content{
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:25px;
+      padding:0 30px 30px;
+    }
+
+    .learn{
+      background:rgba(255,255,255,0.7);
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 5px 10px rgba(0,0,0,0.1);
+
+      transition:0.5s;
+    }
+
+    .learn:hover{
+      transform:translateY(-5px);
+    }
+
+    .learn h2{
+      background:#1f4d3f;
+      color:white;
+      text-align:center;
+      padding:12px;
+      margin:-20px -20px 20px;
+      border-radius:15px 15px 0 0;
+      font-size:22px;
+    }
+
+    .learn ul{
+      list-style:none;
+    }
+
+    .learn li{
+      margin:14px 0;
+      font-size:18px;
+      color:#1f4d3f;
+      font-weight:bold;
+
+      transition:0.4s;
+    }
+
+    .learn li:hover{
+      transform:translateX(10px);
+      color:#0b3b2e;
+    }
+
+    .learn li::before{
+      content:"✔ ";
+      color:#1f4d3f;
+    }
+
+    .right{
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .fees{
+      background:#1f4d3f;
+      color:#ffd54f;
+      text-align:center;
+      padding:25px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+      transition:0.5s;
+      animation:glow 2s infinite alternate;
+    }
+
+    .fees:hover{
+      transform:scale(1.05);
+    }
+
+    @keyframes glow{
+      from{
+        box-shadow:0 0 10px rgba(255,213,79,0.3);
+      }
+      to{
+        box-shadow:0 0 25px rgba(255,213,79,0.8);
+      }
+    }
+
+    .fees small{
+      color:white;
+      font-size:20px;
+    }
+
+    .fees h1{
+      font-size:60px;
+      margin-top:10px;
+    }
+
+    .certificate{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      text-align:center;
+      border:2px solid #1f4d3f;
+      color:#1f4d3f;
+      font-weight:bold;
+      line-height:1.5;
+
+      transition:0.5s;
+    }
+
+    .certificate:hover{
+      transform:rotate(-2deg) scale(1.03);
+    }
+
+    .footer{
+      background:#1f4d3f;
+      color:white;
+      padding:20px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .footer h3{
+      font-size:26px;
+    }
+
+    .footer p{
+      font-size:14px;
+      margin-top:5px;
+    }
+
+    .phone{
+      font-size:30px;
+      color:#ffd54f;
+      font-weight:bold;
+
+      animation:ring 1.5s infinite;
+    }
+
+    @keyframes ring{
+      0%{
+        transform:rotate(0);
+      }
+      20%{
+        transform:rotate(10deg);
+      }
+      40%{
+        transform:rotate(-10deg);
+      }
+      60%{
+        transform:rotate(10deg);
+      }
+      80%{
+        transform:rotate(-10deg);
+      }
+      100%{
+        transform:rotate(0);
+      }
+    }
+
+    .bottom{
+      text-align:center;
+      background:#ffd54f;
+      color:#1f4d3f;
+      font-size:24px;
+      font-weight:bold;
+      padding:15px;
+      letter-spacing:1px;
+
+      animation:blink 2s infinite;
+    }
+
+    @keyframes blink{
+      0%{
+        opacity:1;
+      }
+      50%{
+        opacity:0.7;
+      }
+      100%{
+        opacity:1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="poster">
+
+    <div class="top">
+
+      <div class="title">
+
+        <h1>SPOKEN<br>ENGLISH</h1>
+
+        <div class="tag">
+          CLASSES WITH
+        </div>
+
+        <div class="grammar">
+          GRAMMAR
+        </div>
+
+      </div>
+
+      <div class="image-box">
+
+        <img src="a.png" alt="Learn English">
+
+      </div>
+
+    </div>
+
+    <div class="badge">
+
+      <div class="num">10</div>
+
+      <div class="txt">
+        DAYS<br>WORKSHOP
+      </div>
+      <img src="a.png" alt="Learn English" class="image-box">
+    </div>
+
+    <div class="date-box">
+
+      17-05-2026
+      <br>
+      <small>TO</small>
+      <br>
+      27-05-2026
+
+    </div>
+
+    <div class="content">
+
+      <div class="learn">
+
+        <h2>WHAT YOU WILL LEARN</h2>
+
+        <ul>
+          <li>Speak English Confidently</li>
+          <li>Grammar & Vocabulary</li>
+          <li>Conversation Practice</li>
+          <li>Role Plays & Activities</li>
+          <li>Fluency & Communication Skills</li>
+        </ul>
+
+      </div>
+
+      <div class="right">
+
+        <div class="fees">
+
+          <small>COURSE FEES</small>
+
+          <h1>499/-</h1>
+
+        </div>
+
+        <div class="certificate">
+
+          WITH CERTIFICATION
+          <br><br>
+
+          Certificate will be awarded to all participants.
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer">
+
+      <div>
+
+        <h3>TRIPURANENI SUJITH</h3>
+
+        <p>ASSISTANT PROFESSOR IN ENGLISH</p>
+
+      </div>
+
+      <div class="phone">
+
+        📞 630355873
+
+      </div>
+
+    </div>
+
+    <div class="bottom">
+
+      REGISTER NOW • LIMITED SEATS AVAILABLE
+
+    </div>
+
+  </div>
+
+</body>
+</html>

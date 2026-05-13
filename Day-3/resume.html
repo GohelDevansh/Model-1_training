@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#e4e4e4;
+      display:flex;
+      justify-content:center;
+      padding:30px;
+    }
+
+    .resume{
+      width:850px;
+      background:white;
+      display:grid;
+      grid-template-columns:280px 1fr;
+      box-shadow:0 0 20px rgba(0,0,0,0.2);
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    /* LEFT SIDE */
+
+    .left{
+      background:#1f3c88;
+      color:white;
+      padding:30px;
+    }
+
+    .profile{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .profile img{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      border:5px solid white;
+      object-fit:cover;
+    }
+
+    .profile h1{
+      margin-top:15px;
+      font-size:28px;
+    }
+
+    .profile p{
+      font-size:16px;
+      margin-top:5px;
+      color:#dcdcdc;
+    }
+
+    .section{
+      margin-top:30px;
+    }
+
+    .section h2{
+      font-size:20px;
+      margin-bottom:15px;
+      border-bottom:2px solid white;
+      padding-bottom:5px;
+    }
+
+    .section p,
+    .section li{
+      font-size:15px;
+      margin:10px 0;
+      line-height:1.6;
+    }
+
+    .section ul{
+      padding-left:20px;
+    }
+
+    /* RIGHT SIDE */
+
+    .right{
+      padding:35px;
+    }
+
+    .right-section{
+      margin-bottom:35px;
+    }
+
+    .right-section h2{
+      color:#1f3c88;
+      font-size:24px;
+      margin-bottom:15px;
+      border-bottom:3px solid #1f3c88;
+      padding-bottom:8px;
+    }
+
+    .right-section p{
+      font-size:15px;
+      line-height:1.8;
+      color:#444;
+    }
+
+    .education,
+    .experience{
+      margin-top:20px;
+    }
+
+    .box{
+      margin-bottom:20px;
+    }
+
+    .box h3{
+      font-size:18px;
+      color:#222;
+    }
+
+    .box span{
+      font-size:14px;
+      color:gray;
+    }
+
+    .box p{
+      margin-top:8px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:15px;
+    }
+
+    .skill{
+      background:#1f3c88;
+      color:white;
+      padding:8px 15px;
+      border-radius:20px;
+      font-size:14px;
+    }
+
+    .projects{
+      margin-top:15px;
+    }
+
+    .projects li{
+      margin:12px 0;
+      line-height:1.6;
+      color:#444;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="resume">
+
+    <!-- LEFT SIDE -->
+
+    <div class="left">
+
+      <div class="profile">
+
+        <img src="images.jpg" alt="Profile Photo">
+
+        <h1>Devansh Gohel</h1>
+
+        <p>Web Developer</p>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Contact</h2>
+
+        <p>📞 +91 9876543210</p>
+
+        <p>📧 devansh@email.com</p>
+
+        <p>📍 Ahmedabad, Gujarat</p>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Skills</h2>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+
+      </div>
+
+      <div class="section">
+
+        <h2>Languages</h2>
+
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Gujarati</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="right">
+
+      <div class="right-section">
+
+        <h2>Profile</h2>
+
+        <p>
+          Passionate and motivated web developer with knowledge of front-end
+          technologies and programming languages. Looking for opportunities
+          to improve technical skills and gain industry experience.
+        </p>
+
+      </div>
+
+      <div class="right-section education">
+
+        <h2>Education</h2>
+
+        <div class="box">
+
+          <h3>B.Tech in Computer Engineering</h3>
+
+          <span>Silver Oak University | 2024 - Present</span>
+
+          <p>
+            Pursuing Bachelor's degree with focus on web development,
+            programming and software engineering.
+          </p>
+
+        </div>
+
+        <div class="box">
+
+          <h3>Higher Secondary Education</h3>
+
+          <span>GSEB Board | 2022 - 2024</span>
+
+          <p>
+            Completed higher secondary education with science stream.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="right-section">
+
+        <h2>Projects</h2>
+
+        <ul class="projects">
+
+          <li>
+            <strong>Portfolio Website:</strong>
+            Created a personal portfolio website using HTML and CSS.
+          </li>
+
+          <li>
+            <strong>Student Management System:</strong>
+            Developed a Java-based student management application.
+          </li>
+
+          <li>
+            <strong>Workshop Poster Design:</strong>
+            Designed responsive posters using HTML and CSS.
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="right-section">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+          <div class="skill">HTML</div>
+
+          <div class="skill">CSS</div>
+
+          <div class="skill">JavaScript</div>
+
+          <div class="skill">Python</div>
+
+          <div class="skill">Java</div>
+
+          <div class="skill">GitHub</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
