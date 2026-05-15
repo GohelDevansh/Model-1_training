@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Position Effect</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial, sans-serif;
+      overflow-x:hidden;
+      background:#111;
+      color:white;
+    }
+
+    /* Video Container */
+    .video-section{
+      position:relative;
+      height:1000px;
+      overflow:hidden;
+    }
+
+    /* Background Video */
+    .video-section video{
+      position:absolute;
+      top:100%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      min-width:100%;
+      min-height:100%;
+      object-fit:cover;
+      z-index:-1;
+    }
+
+    /* Overlay */
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+    }
+
+    /* Center Content */
+    .content{
+      position:relative;
+      z-index:2;
+      height:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
+    }
+
+    .content h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      animation:slideUp 1s ease;
+    }
+
+    .content p{
+      font-size:1.2rem;
+      max-width:700px;
+      line-height:1.6;
+    }
+
+    /* Extra Scroll Section */
+    .scroll-content{
+      padding:100px 10%;
+      background:#fff;
+      color:#222;
+      line-height:1.8;
+    }
+
+    @keyframes slideUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <section class="video-section">
+
+    <video autoplay muted loop playsinline>
+      <source src="video/video1.mp4" type="video/mp4">
+    </video>
+     <video autoplay muted loop playsinline>
+      <source src="video/video1.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="content">
+      <h1>Solo leveling</h1>
+      <p>
+        If the pain doesn't kill me… it will only make me stronger
+      </p>
+    </div>
+
+  </section>
+
+  <!-- Scroll Content -->
+  <section class="scroll-content">
+    <h2>Other motivitation</h2>
+    <p>
+      Zack Lee - I no longer fear the storm... for all I need to do is not get wet.
+    </p>
+
+    <p>
+     Gun Park -  If you win, even your cruelty is justified. The world only cares about the results
+    </p>
+  </section>
+
+</body>
+</html>
