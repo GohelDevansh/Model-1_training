@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+       
+       nav{
+        width: 100%;
+        /* height: 5px; */
+        box-sizing: border-box;
+        border: 1px solid black;
+       }
+        .class1{
+            /* border-width: 1px;
+            border-style: solid;
+            border-color: black; */
+            list-style: none;
+            display: inline-block;
+        }
+        .class2{
+             width: 100%;
+        }
+        ul,li{
+            float: left ;
+            width: 20%;
+            height: 40px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+        
+            li a{
+                text-decoration: none;
+                color: white;
+            }
+
+            li:hover{
+                background-color: red;
+                border-radius: 50px;
+                transition: 1s;
+            }
+            .web_name{
+                float: left;
+                position: absolute;
+                padding-top: 10px;
+            }
+            .side_note{
+                float: right;
+               
+                padding-top: 15px;
+            }
+
+            .box{
+                width: 100%;
+                height: 50px;
+            }
+            .box2{
+                
+                width: 100%;
+                height: 1020px;
+
+            }
+            header{
+                background-image: url(background.jpg);
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 120px;
+                
+                /* background-size: 1920px 1020px; */
+            }
+            .search_box{
+                width: 1200px;
+                height: 30px;
+                text-align: center;
+                font-size: 15px;
+            }
+            .search_btn{
+                height: 30px;
+                width: 141px;
+                outline: none;
+
+                font-size: 15px;
+            }
+            .main_box{
+                width: 100%;
+                height: 900px;
+                background-color: rgba(19, 18, 18, 0.905);
+            }
+            legend{
+                color: white;
+                font-size: 20px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <h1 class="web_name">Games Zone</h1>
+            <p class="side_note">Online play and Enjoy Your Day</p>
+        </div>
+        <nav>
+        <ul class="class1 class2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Signin</a></li>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+        </nav>
+        <div class="box2">
+            <form >
+            <input type="search" name="Search" placeholder="Search Your Game " class="search_box"><input type="submit" value="Search" class="search_btn">
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_box">
+            <fieldset>
+                <legend>Online Games</legend>
+                <!-- <marquee behavior="scroll" direction="left" >
+               
+                </marquee> -->
+                <marquee behavior="" direction="right">
+                <!-- <a href="#"><img src="images/g.webp" alt=""></a> -->
+                 <a href="chess.html"><img src="images/chess.jpg" alt="chess"></a>
+                <a href="tictactoe.html"><img src="images/tic tac toe.jpg" alt="tic tac toe.jpg"></a>
+                <a href="car.html"><img src="images/race.jpg" alt="car"></a>
+                <img src="images/monstors.jpg" alt="">
+                <img src="images/montor truck.jpg" alt="">
+                 <img src="images/obby road.jpg" alt="">
+                <img src="images/fortride.jpg" alt="">
+                <img src="images/subway.jpg" alt="">
+                <a href="templetun.html"><img src="images/temple.jpg" alt=""></a>
+                </marquee>
+            </fieldset>
+
+        </div>
+    </main>
+   
+</body>
+</html>

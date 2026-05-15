@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Race Car Game</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+/* Game Area */
+.game{
+    width:400px;
+    height:700px;
+    background:#333;
+    position:relative;
+    overflow:hidden;
+    border:6px solid #00f2ea;
+    box-shadow:0 0 30px #00f2ea;
+}
+
+/* Road */
+.road{
+    position:absolute;
+    width:100%;
+    height:200%;
+    background:
+    repeating-linear-gradient(
+        transparent 0 40px,
+        white 40px 80px
+    );
+    opacity:0.3;
+    animation:roadMove 1s linear infinite;
+}
+
+@keyframes roadMove{
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(80px);
+    }
+}
+
+/* Lane Lines */
+.line{
+    position:absolute;
+    width:10px;
+    height:80px;
+    background:white;
+    left:50%;
+    transform:translateX(-50%);
+    animation:lineMove 1s linear infinite;
+}
+
+.l2{
+    top:150px;
+}
+
+.l3{
+    top:300px;
+}
+
+.l4{
+    top:450px;
+}
+
+@keyframes lineMove{
+    from{
+        transform:translate(-50%,-100px);
+    }
+
+    to{
+        transform:translate(-50%,800px);
+    }
+}
+
+/* Player Car */
+.car{
+    width:80px;
+    height:140px;
+    background:#ff0050;
+    position:absolute;
+    bottom:30px;
+    left:160px;
+    border-radius:15px;
+    box-shadow:0 0 25px #ff0050;
+    animation:carMove 3s infinite alternate ease-in-out;
+}
+
+/* Car Windows */
+.car::before{
+    content:"";
+    position:absolute;
+    width:50px;
+    height:40px;
+    background:#00f2ea;
+    top:15px;
+    left:15px;
+    border-radius:8px;
+}
+
+/* Wheels */
+.car::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:20px;
+    background:
+    radial-gradient(circle,#000 40%,transparent 41%) left,
+    radial-gradient(circle,#000 40%,transparent 41%) right;
+    background-size:20px 20px;
+    background-repeat:no-repeat;
+    bottom:10px;
+    left:-5px;
+}
+
+/* Car Movement */
+@keyframes carMove{
+    0%{
+        left:60px;
+    }
+
+    50%{
+        left:160px;
+    }
+
+    100%{
+        left:260px;
+    }
+}
+
+/* Enemy Cars */
+.enemy{
+    width:70px;
+    height:120px;
+    background:#00f2ea;
+    position:absolute;
+    top:-150px;
+    border-radius:15px;
+    animation:enemyMove 3s linear infinite;
+}
+
+.e1{
+    left:50px;
+}
+
+.e2{
+    left:250px;
+    animation-delay:1.5s;
+}
+
+/* Enemy Animation */
+@keyframes enemyMove{
+    from{
+        top:-150px;
+    }
+
+    to{
+        top:800px;
+    }
+}
+
+/* Title */
+.title{
+    position:absolute;
+    top:20px;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:35px;
+    text-shadow:0 0 15px #00f2ea;
+    z-index:10;
+}
+
+/* Score */
+.score{
+    position:absolute;
+    top:70px;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    font-size:22px;
+}
+
+.score::after{
+    content:"999";
+    animation:score 10s infinite steps(10);
+}
+
+@keyframes score{
+    0%{content:"0";}
+    20%{content:"200";}
+    40%{content:"400";}
+    60%{content:"600";}
+    80%{content:"800";}
+    100%{content:"999";}
+}
+
+</style>
+</head>
+<body>
+
+<div class="game">
+
+    <div class="title">Race Car Game</div>
+
+    <div class="score">Score: </div>
+
+    <!-- Road -->
+    <div class="road"></div>
+
+    <!-- Lane Lines -->
+    <div class="line"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
+    <div class="line l4"></div>
+
+    <!-- Enemy Cars -->
+    <div class="enemy e1"></div>
+    <div class="enemy e2"></div>
+
+    <!-- Player Car -->
+    <div class="car"></div>
+
+</div>
+
+</body>
+</html>

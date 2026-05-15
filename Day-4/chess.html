@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chess Game</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Arial;
+}
+
+h1{
+    color:white;
+    position:absolute;
+    top:20px;
+}
+
+/* Board */
+.board{
+    width:480px;
+    height:480px;
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    border:5px solid gold;
+}
+
+.square{
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* Colors */
+.white{ background:#f0d9b5; }
+.black{ background:#b58863; }
+
+.selected{
+    outline:3px solid red;
+}
+</style>
+</head>
+
+<body>
+
+<h1>♟️ Chess Game</h1>
+
+<div class="board" id="board"></div>
+
+<script>
+
+const board = document.getElementById("board");
+
+let selected = null;
+let turn = "white";
+
+/* Initial setup */
+let pieces = [
+["♜","♞","♝","♛","♚","♝","♞","♜"],
+["♟","♟","♟","♟","♟","♟","♟","♟"],
+["","","","","","","",""],
+["","","","","","","",""],
+["","","","","","","",""],
+["","","","","","","",""],
+["♙","♙","♙","♙","♙","♙","♙","♙"],
+["♖","♘","♗","♕","♔","♗","♘","♖"]
+];
+
+/* Create board */
+function drawBoard(){
+    board.innerHTML = "";
+
+    for(let r=0;r<8;r++){
+        for(let c=0;c<8;c++){
+
+            let square = document.createElement("div");
+            square.classList.add("square");
+
+            if((r+c)%2==0){
+                square.classList.add("white");
+            }else{
+                square.classList.add("black");
+            }
+
+            square.dataset.row = r;
+            square.dataset.col = c;
+
+            square.innerText = pieces[r][c];
+
+            square.addEventListener("click", selectMove);
+
+            board.appendChild(square);
+        }
+    }
+}
+
+/* Select & Move */
+function selectMove(e){
+    let r = e.target.dataset.row;
+    let c = e.target.dataset.col;
+
+    let piece = pieces[r][c];
+
+    /* Select piece */
+    if(selected == null && piece != ""){
+        selected = {r,c,piece};
+        e.target.classList.add("selected");
+        return;
+    }
+
+    /* Move piece */
+    if(selected){
+        pieces[r][c] = selected.piece;
+        pieces[selected.r][selected.c] = "";
+
+        selected = null;
+        turn = turn === "white" ? "black" : "white";
+
+        drawBoard();
+    }
+}
+
+drawBoard();
+
+</script>
+
+</body>
+</html>

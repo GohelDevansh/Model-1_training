@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tic Tac Toe</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Arial,sans-serif;
+}
+
+/* Main Box */
+.game{
+    text-align:center;
+}
+
+/* Title */
+.title{
+    color:#fff;
+    font-size:45px;
+    margin-bottom:20px;
+    text-shadow:0 0 20px #00f2ea;
+}
+
+/* Board */
+.board{
+    width:330px;
+    display:grid;
+    grid-template-columns:repeat(3,100px);
+    gap:10px;
+}
+
+/* Hide Inputs */
+input{
+    display:none;
+}
+
+/* Cell */
+.cell{
+    width:100px;
+    height:100px;
+    background:#222;
+    border:3px solid #00f2ea;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    position:relative;
+    transition:0.3s;
+    overflow:hidden;
+}
+
+/* Hover */
+.cell:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00f2ea;
+}
+
+/* X Style */
+.x:checked + label::before{
+    content:"X";
+    color:#ff0050;
+    font-size:60px;
+    font-weight:bold;
+}
+
+/* O Style */
+.o:checked + label::before{
+    content:"O";
+    color:#00f2ea;
+    font-size:60px;
+    font-weight:bold;
+}
+
+/* Pop Animation */
+label::before{
+    animation:pop 0.3s ease;
+}
+
+@keyframes pop{
+    from{
+        transform:scale(0);
+    }
+
+    to{
+        transform:scale(1);
+    }
+}
+
+/* Glow */
+.cell::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.03);
+}
+
+</style>
+</head>
+<body>
+
+<div class="game">
+
+    <div class="title">Tic Tac Toe</div>
+
+    <div class="board">
+
+        <!-- 1 -->
+        <input type="radio" name="c1" id="x1" class="x">
+        <label for="x1" class="cell"></label>
+
+        <!-- 2 -->
+        <input type="radio" name="c2" id="o2" class="o">
+        <label for="o2" class="cell"></label>
+
+        <!-- 3 -->
+        <input type="radio" name="c3" id="x3" class="x">
+        <label for="x3" class="cell"></label>
+
+        <!-- 4 -->
+        <input type="radio" name="c4" id="o4" class="o">
+        <label for="o4" class="cell"></label>
+
+        <!-- 5 -->
+        <input type="radio" name="c5" id="x5" class="x">
+        <label for="x5" class="cell"></label>
+
+        <!-- 6 -->
+        <input type="radio" name="c6" id="o6" class="o">
+        <label for="o6" class="cell"></label>
+
+        <!-- 7 -->
+        <input type="radio" name="c7" id="x7" class="x">
+        <label for="x7" class="cell"></label>
+
+        <!-- 8 -->
+        <input type="radio" name="c8" id="o8" class="o">
+        <label for="o8" class="cell"></label>
+
+        <!-- 9 -->
+        <input type="radio" name="c9" id="x9" class="x">
+        <label for="x9" class="cell"></label>
+
+    </div>
+
+</div>
+
+</body>
+</html>

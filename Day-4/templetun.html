@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temple Run Game</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Arial;
+}
+
+/* Game Area */
+.game{
+    width:400px;
+    height:600px;
+    background:#222;
+    position:relative;
+    overflow:hidden;
+    border:4px solid gold;
+}
+
+/* Player */
+.player{
+    width:50px;
+    height:50px;
+    background:red;
+    position:absolute;
+    bottom:50px;
+    left:175px;
+    border-radius:10px;
+}
+
+/* Jump animation */
+.jump{
+    animation:jump 0.5s linear;
+}
+
+@keyframes jump{
+    0%{bottom:50px;}
+    50%{bottom:200px;}
+    100%{bottom:50px;}
+}
+
+/* Obstacle */
+.obstacle{
+    width:50px;
+    height:50px;
+    background:black;
+    position:absolute;
+    top:-60px;
+    left:175px;
+}
+
+/* Score */
+.score{
+    position:absolute;
+    top:10px;
+    left:10px;
+    color:white;
+    font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="game">
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="player" id="player"></div>
+    <div class="obstacle" id="obstacle"></div>
+</div>
+
+<script>
+
+let player = document.getElementById("player");
+let obstacle = document.getElementById("obstacle");
+let scoreText = document.getElementById("score");
+
+let score = 0;
+let isJumping = false;
+
+/* Jump */
+document.addEventListener("keydown", function(e){
+    if(e.key === " "){
+        if(!isJumping){
+            isJumping = true;
+            player.classList.add("jump");
+
+            setTimeout(()=>{
+                player.classList.remove("jump");
+                isJumping = false;
+            },500);
+        }
+    }
+});
+
+/* Move obstacle */
+function moveObstacle(){
+    let top = -60;
+
+    let interval = setInterval(()=>{
+        top += 5;
+        obstacle.style.top = top + "px";
+
+        let playerBottom = 50;
+
+        /* Collision */
+        if(top > 450 && top < 550){
+            let obstacleLeft = 175;
+            let playerLeft = 175;
+
+            if(!isJumping){
+                alert("Game Over! Score: " + score);
+                location.reload();
+            }
+        }
+
+        if(top > 600){
+            top = -60;
+            score++;
+            scoreText.innerText = score;
+        }
+
+    },30);
+}
+
+moveObstacle();
+
+</script>
+
+</body>
+</html>
