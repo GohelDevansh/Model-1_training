@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetsshop</title>
+    
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+}
+        *{
+            padding: 0px;
+            margin: 0;
+        }
+
+        header{
+            width: 100%;
+            height: auto;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            box-sizing: border-box;
+        }
+        .header_box{
+            width: 100%;
+            height: 45px;
+             border-width: 1px;
+            border-style: solid;
+            border-color: black;
+            box-sizing: border-box;
+            padding: 10px;
+            float: left;
+            display: inline;
+
+        }
+        .header_title{
+            font-size: 25px;
+            font-family: sans-serif;
+            float: left;
+
+
+
+        }
+        .header_para{
+            float: right;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+      
+
+        nav{
+    width: 100%;
+    height: 100px;
+
+    background-color: blue;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+       
+        #search{
+            width: 600px;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+        }
+        #search_btn{
+            width: 90px;
+            height: 40px;
+            box-sizing: border-box;
+            margin-left: -5px;
+            border: none;
+        }
+        #nav_menu{
+            display: inline-block;
+            list-style: none;
+            float: right;
+            display: flex;
+            /* border: 1px solid white; */
+            width: 500px;
+            clear: both;
+            height: 40px;
+            box-sizing: border-box;
+            border: none;
+
+        }
+        
+        .nav_small_bar{
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+            /* color: white; */
+            background-color: white;
+        }
+
+        .menu{
+            text-decoration: none;
+            color: black;
+        }
+
+        section{
+            width: auto;
+            height: 1200px;
+            padding: 30px;
+        }
+
+        #address_bar{
+            float: left;
+          
+        }
+        #mobile{
+            float: right;
+            
+        }
+        #sweet_box{
+            width: 690px;
+            height: 500px;
+            border: 1px solid black;
+            float: left;
+            clear: both;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: black;
+            box-sizing: border-box;
+          
+            
+        }
+        #sweet_title{
+            font-size: 30px;
+            font-family: sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            color: white;
+            box-sizing: border-box;
+            
+        }
+        .sweet_img{
+            width: 250px;
+            height: 200px;
+            float: left;
+            border: 1px solid black;
+            margin-left: 60px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            
+             
+        
+        }
+       
+      .img_size{
+        width: 250px;
+        height: 200px;
+
+        box-sizing: border-box;
+      }
+    
+      #list_box{
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        float: right;
+        margin-top: 20px;
+      }
+
+      table{
+        /* border: 1px solid black; */
+       width: 100%;
+       background-color: black;
+       border: 1px solid white;
+        
+      }
+      .list_name{
+       font-size: 20px;
+       text-align: center;
+       background-color: black;
+       color: white;
+       box-sizing: border-box;
+       border: 1px solid white;
+       }
+
+       .list_price{
+        font-size: 20px;
+        text-align: center;
+        color: white;
+       box-sizing: border-box;
+       border: 1px solid white;
+        }
+
+         ol{
+         margin: 0;
+         padding-left: 25px;
+         text-align: left;
+         line-height: 45px;
+         }
+
+        ul{
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            line-height: 47px;
+        }
+        #form_box{
+            width: 690px;
+            height: 550px;
+            /* border: 1px solid black; */
+            float: left;
+            box-sizing: border-box;
+            margin-top: 30px; 
+            font-size: 20px;
+            /* background-color: #ccc; */
+               }
+
+        #fieldset{
+            height: 490px;
+            padding: 50px;
+            background-color: #ccc;
+        }
+        legend{
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: bold;
+            
+        }
+        .input_form{
+            width: 96%;
+            height: 10px;
+            font-size: 15px;
+            padding: 10px;
+        }
+        textarea{
+            width: 96%;
+            height: 50px;
+            padding: 10px;
+            font-size: 15px;
+        }
+        select{
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            font-size: 15px;
+
+        }
+        #submit{
+            font-size: 15px;
+            width: 100px;
+            height: 40px;
+            float: right;
+        }
+
+        #abt-us{
+            float: right;
+            width: 500px;
+            height: 577px;
+            border: 1px solid black;
+            margin-top: 43px;
+            
+        }
+        #abt_title{
+            text-align: center;
+          
+            color: black;
+        }
+        #abt_text{
+            text-align: justify;
+            padding: 40px;
+            
+        }
+        footer{
+            width: 100%;
+            height: 150px;
+            background-color: black;
+            float: left;
+        }
+        #contact_us{
+            float: left;
+            /* border: 1px solid red; */
+            width: 400px;
+            height: 100px;
+            
+        }
+        .social_us{
+            float: right;
+            /* border: 1px solid red; */
+            width: 400px;
+            height: 150px;
+        }
+        .contact_title{
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        address{
+           color: white;
+           font-size: 18px;
+           margin-bottom: 5px;
+           /* padding:10px */
+           
+        }
+        #social_img{
+            width: 450px;
+            height: 90px;
+        }
+        #abt_title{
+             color: white;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #abt_img{
+            width: 100%;
+            height: 100px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+     
+</head>
+<body>
+    <header>
+        <div class="header_box">
+            <h1 class="header_title"> Sweets Shop</h1>
+            <p class="header_para">Enjoy Your Sweets And Your Happy</p>
+        </div>
+
+        <nav>
+            <form >
+                <input type="search" name="search" id="search" placeholder="Search Your Sweets Here">
+                <input type="submit" value="Search" id="search_btn">
+            </form>
+
+           
+                <ul id="nav_menu">
+                <li class="nav_small_bar"><a href="#" class="menu">Home</a></li>
+                <li class="nav_small_bar"><a href="#" class="menu">Sweets</a></li>
+                <li class="nav_small_bar"><a href="#fieldset" class="menu">Order Now</a></li>
+                <li class="nav_small_bar"><a href="#contact_us" class="menu">Contact us</a></li>
+                <li class="nav_small_bar"><a href="#abt-us" class="menu">About us</a></li>
+            </ul>
+           </nav>
+    </header>
+    <section>
+        <address id="address_bar">
+            Venue: Patel Nagar, Gujarat - 382405.
+        </address>
+        <address id="mobile">
+            Mobile No - +91 9099945343, +91 9587456545
+        </address>
+
+    
+        <div id="sweet_box">
+            <h1 id="sweet_title">Sweets</h1>
+            <div class="sweet_img"><img src="image/a.jpg" alt="" class="img_size" ></div>
+            <div class="sweet_img"><img src="image/b.jpg" alt="" class="img_size" ></div>
+            <div class="sweet_img"><img src="image/c.jpg" alt="" class="img_size" ></div>
+            <div class="sweet_img"><img src="image/d.jpg" alt="" class="img_size" ></div>
+
+        </div>
+
+        <div id="list_box">
+            <table  >
+                <tr>
+                    <td class="list_name">Sweets Name</td>
+                    <td class="list_price">Price</td>
+                </tr>
+                <tr>
+                    <td class="list_name">
+                        <ol>
+                            <li>Gulab Jamun</li>
+                            <li>Rasgulla</li>
+                            <li>Kaju Katli</li>
+                            <li>Jalebi</li>
+                            <li>Laddu</li>
+                            <li>Barfi</li>
+                            <li>Rasmalai</li>
+                            <li>Peda</li>
+                            <li>Soan Papdi</li>
+                            <li>Halwa</li>
+                            
+                        </ol>
+                    </td>
+                    <td class="list_price">
+                        <ul>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                            <li>200rs per kg</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="form_box">
+            <fieldset id="fieldset">
+                <legend>Order Form</legend>
+                <form>
+                    Name: <br>
+                    <input type="text" name="name" placeholder="Enter Your Name" class="input_form">
+                    <br><br>
+                    E-mail: <br>
+                    <input type="email" name="email" placeholder="Enter Your Email" class="input_form">
+                    <br><br>
+                    Quanity: <br>
+                    <input type="number" name="Quantity" placeholder="Enter sweets quantity" class="input_form">
+                    <br><br>
+                    Choose Sweet: <br>
+                    <select >
+                        <option value=""></option>
+                        <option value="Gulab Jamun">Gulab Jamun</option>
+                        <option value="Rasgulla">Rasgulla</option>
+                        <option value="Kaju Katli">Kaju Katli</option>
+                        <option value="Jalebi">Jalebi</option>
+                        <option value="Laddu">Laddu</option>
+                        <option value="Barfi">Barfi</option>
+                        <option value="Rasmalai">Rasmalai</option>
+                        <option value="Peda">Peda</option>
+                        <option value="Soan Papdi">Soan Papdi</option>
+                        <option value="Halwa">Halwa</option>
+                    </select>
+                    <br><br>
+                    Address: <br>
+                    <textarea name="address" ></textarea>
+                    <br><br>
+                    <input type="submit" name="Submit" id="submit">
+
+                </form> 
+            </fieldset>
+
+        </div>
+
+        <div id="abt-us">
+            <!-- <h1 id="abt_title">About us</h1> -->
+             <h1>About us</h1>
+            <p id="abt_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur soluta quae ex voluptas voluptatum sunt est animi aspernatur vero, esse minima molestias! Repellat beatae reprehenderit maiores doloremque voluptates? Quis repellat recusandae sapiente, sit totam dolores et, officia illo consectetur earum alias officiis, molestias voluptate magni quo doloribus est veritatis sint iste deserunt mollitia obcaecati. Esse debitis labore nobis amet est! Quam modi doloribus cum ex illo eos aperiam blanditiis eius, tempora tenetur fugit quia provident enim quod quos, ut nostrum, nihil voluptas repudiandae iusto iste cupiditate dolor. Asperiores aspernatur possimus exercitationem iste obcaecati perferendis sapiente blanditiis excepturi. Aut dolores sint praesentium facilis, debitis quibusdam aspernatur rem ipsa, atque consectetur tempora omnis. Mollitia dolorem amet consequatur, quaerat fuga id! Fugit rerum in facere id similique, suscipit iusto excepturi saepe beatae officiis ea odio necessitatibus optio. Voluptates nostrum ea quae harum deserunt doloribus natus beatae? Dolore animi vitae blanditiis eos dicta consequatur consectetur enim beatae explicabo, totam omnis deserunt quisquam odit. Alias blanditiis, eaque, perspiciatis consequatur illum debitis inventore, illo sunt magni sapiente eligendi velit autem in rerum consequuntur doloribus recusandae harum totam? Eum, vero quaerat neque sapiente accusamus voluptas dicta! Inventore saepe consequatur velit accusantium asperiores culpa ex dignissimos temporibus molestias.</p>
+        </div>
+
+
+    </section>
+    <footer>
+        <div id="contact_us">
+            <h1 class="contact_title">Contact_us</h1>
+            <address>Website : www.sweetsshop.com</address>
+            <address>Address : Venue: Patel Nagar, Gujarat - 382405.</address>
+            <address>E-mail  : sweetsshop@gmail.com</address>
+            <address>Mobile No: +91 9099945343, +91 9587456545</address>
+
+        </div>
+        <div class="social_us">
+            <h1 id="abt_title">Social Follow</h1>
+            
+                <img src="image/all2.png" alt="" id="abt_img">
+
+            
+        </div>
+    </footer>
+</body>
+</html>

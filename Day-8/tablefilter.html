@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>No JS Table Filter</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
+
+    <h1 class="text-2xl font-bold mb-4">CSS Only Table Filter</h1>
+
+    <div class="flex flex-wrap gap-3 mb-6">
+
+      <label class="cursor-pointer">
+        <input type="radio" name="filter" class="peer hidden" checked>
+        <span class="px-4 py-2 bg-blue-500 text-white rounded-lg peer-checked:bg-blue-700">
+          All
+        </span>
+      </label>
+
+      <label class="cursor-pointer">
+        <input type="radio" name="filter" class="peer hidden">
+        <span class="px-4 py-2 bg-gray-300 rounded-lg peer-checked:bg-blue-700 peer-checked:text-white">
+          Developer
+        </span>
+      </label>
+
+      <label class="cursor-pointer">
+        <input type="radio" name="filter" class="peer hidden">
+        <span class="px-4 py-2 bg-gray-300 rounded-lg peer-checked:bg-blue-700 peer-checked:text-white">
+          Designer
+        </span>
+      </label>
+
+      <label class="cursor-pointer">
+        <input type="radio" name="filter" class="peer hidden">
+        <span class="px-4 py-2 bg-gray-300 rounded-lg peer-checked:bg-blue-700 peer-checked:text-white">
+          Manager
+        </span>
+      </label>
+
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full border border-gray-300">
+        <thead>
+          <tr class="bg-blue-500 text-white">
+            <th class="p-3 border">Name</th>
+            <th class="p-3 border">Role</th>
+            <th class="p-3 border">Location</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+
+          <tr class="transition-all duration-300 hover:bg-gray-100">
+            <td class="p-3 border">Aarav Patel</td>
+            <td class="p-3 border">Developer</td>
+            <td class="p-3 border">Ahmedabad</td>
+          </tr>
+
+          <tr class="transition-all duration-300 hover:bg-gray-100">
+            <td class="p-3 border">Sneha Joshi</td>
+            <td class="p-3 border">Developer</td>
+            <td class="p-3 border">Pune</td>
+          </tr>
+
+
+          <tr class="transition-all duration-300 hover:bg-gray-100">
+            <td class="p-3 border">Priya Sharma</td>
+            <td class="p-3 border">Designer</td>
+            <td class="p-3 border">Mumbai</td>
+          </tr>
+
+
+          <tr class="transition-all duration-300 hover:bg-gray-100">
+            <td class="p-3 border">Rohan Mehta</td>
+            <td class="p-3 border">Manager</td>
+            <td class="p-3 border">Delhi</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    
+
+  </div>
+
+</body>
+</html>

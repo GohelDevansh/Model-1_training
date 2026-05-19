@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sweets Shop</title>
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 p-0">
+
+
+  <header class="w-full border border-black">
+
+
+    <div class="w-full border border-black p-3 flex justify-between items-center flex-wrap">
+      <h1 class="text-3xl font-sans font-bold">Sweets Shop</h1>
+
+      <p class="text-sm mt-2 md:mt-0">
+        Enjoy Your Sweets And Your Happy
+      </p>
+    </div>
+
+
+    <nav class="w-full bg-blue-600 p-6 flex flex-col lg:flex-row justify-between items-center gap-5">
+
+
+      <form class="flex">
+        <input 
+          type="search"
+          placeholder="Search Your Sweets Here"
+          class="w-[300px] md:w-[500px] lg:w-[600px] h-10 px-3 outline-none"
+        />
+
+        <input
+          type="submit"
+          value="Search"
+          class="w-24 h-10 bg-white cursor-pointer"
+        />
+      </form>
+
+      <!-- Menu -->
+      <ul class="flex flex-wrap justify-center gap-2">
+
+        <li class="bg-white border border-gray-300 px-5 py-2">
+          <a href="#" class="text-black no-underline">Home</a>
+        </li>
+
+        <li class="bg-white border border-gray-300 px-5 py-2">
+          <a href="#" class="text-black no-underline">Sweets</a>
+        </li>
+
+        <li class="bg-white border border-gray-300 px-5 py-2">
+          <a href="#fieldset" class="text-black no-underline">Order Now</a>
+        </li>
+
+        <li class="bg-white border border-gray-300 px-5 py-2">
+          <a href="#contact_us" class="text-black no-underline">Contact us</a>
+        </li>
+
+        <li class="bg-white border border-gray-300 px-5 py-2">
+          <a href="#abt-us" class="text-black no-underline">About us</a>
+        </li>
+
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="p-8">
+
+
+    <div class="flex flex-col md:flex-row justify-between mb-5 gap-2">
+      <address class="not-italic">
+        Venue: Patel Nagar, Gujarat - 382405.
+      </address>
+
+      <address class="not-italic">
+        Mobile No - +91 9099945343, +91 9587456545
+      </address>
+    </div>
+
+
+    <div class="flex flex-col xl:flex-row gap-6">
+
+
+      <div class="bg-black p-4 w-full xl:w-[700px]">
+
+        <h1 class="text-white text-3xl text-center mb-5">
+          Sweets
+        </h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 place-items-center">
+
+          <div>
+            <img src="image/a.jpg" class="w-[250px] h-[200px]" />
+          </div>
+
+          <div>
+            <img src="image/b.jpg" class="w-[250px] h-[200px]" />
+          </div>
+
+          <div>
+            <img src="image/c.jpg" class="w-[250px] h-[200px]" />
+          </div>
+
+          <div>
+            <img src="image/d.jpg" class="w-[250px] h-[200px]" />
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="w-full xl:w-[500px]">
+
+        <table class="w-full bg-black border border-white">
+
+          <tr>
+            <td class="text-white text-xl text-center border border-white p-3">
+              Sweets Name
+            </td>
+
+            <td class="text-white text-xl text-center border border-white p-3">
+              Price
+            </td>
+          </tr>
+
+          <tr>
+
+            <td class="text-white border border-white align-top p-4">
+              <ol class="list-decimal pl-5 leading-10">
+
+                <li>Gulab Jamun</li>
+                <li>Rasgulla</li>
+                <li>Kaju Katli</li>
+                <li>Jalebi</li>
+                <li>Laddu</li>
+                <li>Barfi</li>
+                <li>Rasmalai</li>
+                <li>Peda</li>
+                <li>Soan Papdi</li>
+                <li>Halwa</li>
+
+              </ol>
+            </td>
+
+            <td class="text-white border border-white align-top p-4">
+              <ul class="leading-10">
+
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+                <li>200rs per kg</li>
+
+              </ul>
+            </td>
+
+          </tr>
+
+        </table>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col xl:flex-row gap-6 mt-8">
+
+
+      <div class="w-full xl:w-[700px]">
+
+        <fieldset id="fieldset" class="bg-gray-300 p-8 border">
+
+          <legend class="text-3xl font-bold px-2">
+            Order Form
+          </legend>
+
+          <form>
+
+            <label>Name:</label><br>
+
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              class="w-full p-3 mt-2"
+            />
+
+            <br><br>
+
+            <label>E-mail:</label><br>
+
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              class="w-full p-3 mt-2"
+            />
+
+            <br><br>
+
+            <label>Quantity:</label><br>
+
+            <input
+              type="number"
+              placeholder="Enter sweets quantity"
+              class="w-full p-3 mt-2"
+            />
+
+            <br><br>
+
+            <label>Choose Sweet:</label><br>
+
+            <select class="w-full p-3 mt-2">
+
+              <option value=""></option>
+              <option>Gulab Jamun</option>
+              <option>Rasgulla</option>
+              <option>Kaju Katli</option>
+              <option>Jalebi</option>
+              <option>Laddu</option>
+              <option>Barfi</option>
+              <option>Rasmalai</option>
+              <option>Peda</option>
+              <option>Soan Papdi</option>
+              <option>Halwa</option>
+
+            </select>
+
+            <br><br>
+
+            <label>Address:</label><br>
+
+            <textarea
+              class="w-full h-24 p-3 mt-2"
+            ></textarea>
+
+            <br><br>
+
+            <input
+              type="submit"
+              value="Submit"
+              class="bg-black text-white px-6 py-3 float-right cursor-pointer"
+            />
+
+          </form>
+        </fieldset>
+      </div>
+
+
+      <div
+        id="abt-us"
+        class="w-full xl:w-[500px] border border-black p-5"
+      >
+
+        <h1 class="text-3xl text-center mb-5">
+          About us
+        </h1>
+
+        <p class="text-justify leading-7">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur soluta quae ex voluptas voluptatum sunt est animi
+          aspernatur vero, esse minima molestias! Repellat beatae
+          reprehenderit maiores doloremque voluptates?
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-black text-white p-8">
+
+    <div class="flex flex-col lg:flex-row justify-between gap-10">
+
+    
+      <div id="contact_us">
+
+        <h1 class="text-3xl text-center mb-4">
+          Contact Us
+        </h1>
+
+        <address class="not-italic leading-8">
+          Website : www.sweetsshop.com <br>
+          Address : Venue: Patel Nagar, Gujarat - 382405. <br>
+          E-mail : sweetsshop@gmail.com <br>
+          Mobile No: +91 9099945343, +91 9587456545
+        </address>
+
+      </div>
+
+
+      <div>
+
+        <h1 class="text-3xl text-center mb-4">
+          Social Follow
+        </h1>
+
+        <img
+          src="image/all2.png"
+          alt=""
+          class="w-full max-w-[450px] h-auto"
+        />
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
