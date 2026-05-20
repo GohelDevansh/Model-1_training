@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweets Shop</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        .header_box{
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+        }
+
+        .header_title{
+            float: left;
+            font-size: 30px;
+        }
+
+        .header_para{
+            float: right;
+            margin-top: 10px;
+        }
+
+        nav{
+            width: 100%;
+            background-color: blue;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #search{
+            width: 500px;
+            height: 40px;
+            padding: 10px;
+            border: none;
+        }
+
+        #search_btn{
+            width: 100px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nav_menu{
+            display: flex;
+            list-style: none;
+            width: 500px;
+        }
+
+        .nav_small_bar{
+            width: 20%;
+            height: 40px;
+            background-color: white;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu{
+            text-decoration: none;
+            color: black;
+        }
+
+        section{
+            width: 100%;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        #address_bar{
+            float: left;
+        }
+
+        #mobile{
+            float: right;
+        }
+
+        #sweet_box{
+            width: 690px;
+            height: 500px;
+            background-color: black;
+            float: left;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        #sweet_title{
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .sweet_img{
+            width: 250px;
+            height: 200px;
+            float: left;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .img_size{
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .img_size:hover{
+            transform: scale(1.1);
+        }
+
+        #list_box{
+            width: 500px;
+            height: 500px;
+            float: right;
+            margin-top: 20px;
+        }
+
+        table{
+            width: 100%;
+            background-color: black;
+            border-collapse: collapse;
+        }
+
+        td{
+            border: 1px solid white;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        ol{
+            padding-left: 20px;
+            line-height: 40px;
+            text-align: left;
+        }
+
+        ul{
+            list-style: none;
+            line-height: 40px;
+        }
+
+        #form_box{
+            width: 690px;
+            float: left;
+            margin-top: 30px;
+        }
+
+        fieldset{
+            padding: 40px;
+            background-color: #ccc;
+        }
+
+        legend{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .input_form{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        textarea{
+            width: 100%;
+            height: 70px;
+            padding: 10px;
+        }
+
+        select{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+        }
+
+        #submit{
+            width: 120px;
+            height: 40px;
+            font-size: 16px;
+            float: right;
+            cursor: pointer;
+        }
+
+        #abt-us{
+            width: 500px;
+            float: right;
+            margin-top: 30px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        #abt_text{
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        footer{
+            width: 100%;
+            background-color: black;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        #contact_us{
+            float: left;
+            width: 50%;
+        }
+
+        .social_us{
+            float: right;
+            width: 40%;
+        }
+
+        .contact_title{
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        address{
+            color: white;
+            line-height: 30px;
+        }
+
+        #abt_img{
+            width: 100%;
+            height: 100px;
+        }
+
+        #price{
+            color: red;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header_box">
+            <h1 class="header_title">Sweets Shop</h1>
+            <p class="header_para">Enjoy Your Sweets And Stay Happy</p>
+        </div>
+
+        <nav>
+
+            <form id="searchForm">
+
+                <input type="search" id="search" placeholder="Search Your Sweets Here">
+
+                <input type="submit" value="Search" id="search_btn">
+
+            </form>
+
+            <ul id="nav_menu">
+
+                <li class="nav_small_bar"><a href="#" class="menu">Home</a></li>
+
+                <li class="nav_small_bar"><a href="#" class="menu">Sweets</a></li>
+
+                <li class="nav_small_bar"><a href="#fieldset" class="menu">Order Now</a></li>
+
+                <li class="nav_small_bar"><a href="#contact_us" class="menu">Contact</a></li>
+
+                <li class="nav_small_bar"><a href="#abt-us" class="menu">About</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section>
+
+        <address id="address_bar">
+            Venue: Patel Nagar, Gujarat - 382405
+        </address>
+
+        <address id="mobile">
+            Mobile No: +91 9099945343
+        </address>
+
+        <div id="sweet_box">
+
+            <h1 id="sweet_title">Sweets</h1>
+
+            <div class="sweet_img">
+                <img src="image/a.jpg" class="img_size">
+            </div>
+
+            <div class="sweet_img">
+                <img src="image/b.jpg" class="img_size">
+            </div>
+
+            <div class="sweet_img">
+                <img src="image/c.jpg" class="img_size">
+            </div>
+
+            <div class="sweet_img">
+                <img src="image/d.jpg" class="img_size">
+            </div>
+
+        </div>
+
+        <div id="list_box">
+
+            <table>
+
+                <tr>
+                    <td>Sweets Name</td>
+                    <td>Price</td>
+                </tr>
+
+                <tr>
+
+                    <td>
+
+                        <ol>
+                            <li>Gulab Jamun</li>
+                            <li>Rasgulla</li>
+                            <li>Kaju Katli</li>
+                            <li>Jalebi</li>
+                            <li>Laddu</li>
+                            <li>Barfi</li>
+                            <li>Rasmalai</li>
+                            <li>Peda</li>
+                            <li>Soan Papdi</li>
+                            <li>Halwa</li>
+                        </ol>
+
+                    </td>
+
+                    <td>
+
+                        <ul>
+                            <li>₹200/kg</li>
+                            <li>₹220/kg</li>
+                            <li>₹500/kg</li>
+                            <li>₹180/kg</li>
+                            <li>₹250/kg</li>
+                            <li>₹300/kg</li>
+                            <li>₹350/kg</li>
+                            <li>₹280/kg</li>
+                            <li>₹150/kg</li>
+                            <li>₹200/kg</li>
+                        </ul>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div id="form_box">
+
+            <fieldset id="fieldset">
+
+                <legend>Order Form</legend>
+
+                <form id="orderForm">
+
+                    Name:
+                    <br><br>
+
+                    <input type="text" id="name" class="input_form" placeholder="Enter Name">
+
+                    <br><br>
+
+                    Email:
+                    <br><br>
+
+                    <input type="email" id="email" class="input_form" placeholder="Enter Email">
+
+                    <br><br>
+
+                    Quantity:
+                    <br><br>
+
+                    <input type="number" id="quantity" class="input_form" placeholder="Enter Quantity">
+
+                    <br><br>
+
+                    Choose Sweet:
+                    <br><br>
+
+                    <select id="sweet">
+
+                        <option value="">Select Sweet</option>
+                        <option value="Gulab Jamun">Gulab Jamun</option>
+                        <option value="Rasgulla">Rasgulla</option>
+                        <option value="Kaju Katli">Kaju Katli</option>
+                        <option value="Jalebi">Jalebi</option>
+                        <option value="Laddu">Laddu</option>
+                        <option value="Barfi">Barfi</option>
+                        <option value="Rasmalai">Rasmalai</option>
+                        <option value="Peda">Peda</option>
+                        <option value="Soan Papdi">Soan Papdi</option>
+                        <option value="Halwa">Halwa</option>
+
+                    </select>
+
+                    <p id="price"></p>
+
+                    <br>
+
+                    Address:
+                    <br><br>
+
+                    <textarea id="address"></textarea>
+
+                    <br><br>
+
+                    <input type="submit" value="Order Now" id="submit">
+
+                </form>
+
+            </fieldset>
+
+        </div>
+
+        <div id="abt-us">
+
+            <h1>About Us</h1>
+
+            <br>
+
+            <p id="abt_text">
+
+                Welcome to Sweets Shop. We provide fresh and delicious sweets with pure quality.
+                Our shop is famous for Gulab Jamun, Kaju Katli, Rasmalai and many more sweets.
+                We always focus on customer satisfaction and hygiene.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div id="contact_us">
+
+            <h1 class="contact_title">Contact Us</h1>
+
+            <address>Website : www.sweetsshop.com</address>
+
+            <address>Email : sweetsshop@gmail.com</address>
+
+            <address>Mobile : +91 9099945343</address>
+
+        </div>
+
+        <div class="social_us">
+
+            <h1 class="contact_title">Social Follow</h1>
+
+            <img src="image/all2.png" id="abt_img">
+
+        </div>
+
+    </footer>
+
+    <script>
+
+      
+
+        const prices = {
+
+            "Gulab Jamun": 200,
+            "Rasgulla": 220,
+            "Kaju Katli": 500,
+            "Jalebi": 180,
+            "Laddu": 250,
+            "Barfi": 300,
+            "Rasmalai": 350,
+            "Peda": 280,
+            "Soan Papdi": 150,
+            "Halwa": 200
+
+        };
+
+    
+
+        document.getElementById("searchForm").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            let searchValue = document.getElementById("search").value;
+
+            if(searchValue == ""){
+
+                alert("Please Enter Sweet Name");
+
+            }
+
+            else{
+
+                alert(searchValue + " is available in our shop!");
+
+            }
+
+        });
+
+   
+
+        document.getElementById("sweet").addEventListener("change", function(){
+
+            let sweetName = this.value;
+
+            if(sweetName != ""){
+
+                document.getElementById("price").innerHTML =
+                "Price : ₹" + prices[sweetName] + " per kg";
+
+            }
+
+            else{
+
+                document.getElementById("price").innerHTML = "";
+
+            }
+
+        });
+
+       
+
+        document.getElementById("orderForm").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let quantity = document.getElementById("quantity").value;
+            let sweet = document.getElementById("sweet").value;
+            let address = document.getElementById("address").value;
+
+            if(name == "" || email == "" || quantity == "" || sweet == "" || address == ""){
+
+                alert("Please Fill All Details");
+
+            }
+
+            else{
+
+                alert(
+                    "Order Placed Successfully!\n\n" +
+                    "Customer Name : " + name +
+                    "\nSweet : " + sweet +
+                    "\nQuantity : " + quantity + " Kg"
+                );
+
+                document.getElementById("orderForm").reset();
+
+                document.getElementById("price").innerHTML = "";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

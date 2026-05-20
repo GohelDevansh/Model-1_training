@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body{
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            width: 400px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-size: 18px;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea{
+            resize: none;
+            height: 80px;
+        }
+
+        button{
+            width: 100%;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registration Form</h1>
+
+        <form id="registerForm">
+
+            <label>Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter Full Name">
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <label>Mobile Number</label>
+            <input type="text" id="mobile" placeholder="Enter Mobile Number">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter Password">
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+            <label>Address</label>
+            <textarea id="address" placeholder="Enter Address"></textarea>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        document.getElementById("registerForm").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            let fullname = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+            let address = document.getElementById("address").value;
+
+            
+
+            if(fullname == "" || email == "" || mobile == "" || password == "" || confirmPassword == "" || address == ""){
+
+                alert("Please Fill All Fields");
+                return;
+
+            }
+
+            
+
+            if(mobile.length != 10 || isNaN(mobile)){
+
+                alert("Enter Valid 10 Digit Mobile Number");
+                return;
+
+            }
+
+            
+
+            if(password.length < 6){
+
+                alert("Password Must Be At Least 6 Characters");
+                return;
+
+            }
+
+            
+
+            if(password != confirmPassword){
+
+                alert("Passwords Do Not Match");
+                return;
+
+            }
+
+            
+
+            alert("Registration Successful!");
+
+            document.getElementById("registerForm").reset();
+
+        });
+
+    </script>
+
+</body>
+</html>
