@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #9333ea);
+  background-size: 400% 400%;
+  animation: bgMove 12s ease infinite;
+  color: white;
+  overflow: hidden;
+}
+
+/* Background animation */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Main container glass effect */
+.container {
+  width: 90%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Title */
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0ea5e9;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #0284c7;
+}
+
+/* Toggle buttons */
+.toggle {
+  margin: 10px 0;
+}
+
+.toggle button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  transition: 0.3s;
+}
+
+.toggle button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Weather card */
+.weather-card {
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.weather-card img {
+  width: 100px;
+}
+
+/* Forecast */
+.forecast {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.day {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 12px;
+  width: 70px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.day:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.2);
+}
+
+.day img {
+  width: 40px;
+}
+
+/* Smooth animations */
+.container {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* b6b89742bc15536bd9cb3485e1a1dc20 */

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ShopHub</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body id="body" class="bg-gray-100 transition">
+
+  <!-- Navbar -->
+  <nav class="bg-black text-white p-4 flex justify-between items-center">
+
+    <h1 class="text-3xl font-bold">
+      ShopHub
+    </h1>
+
+    <div class="flex gap-4 items-center">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        class="p-2 rounded text-black"
+      >
+
+      <button
+        id="darkBtn"
+        class="bg-white text-black px-4 py-2 rounded"
+      >
+        Dark
+      </button>
+
+      <a href="cart.html" class="relative text-2xl">
+
+        🛒
+
+        <span
+          id="cartCount"
+          class="absolute -top-2 -right-3 bg-red-500 text-xs px-2 rounded-full"
+        >
+          0
+        </span>
+
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- Hero -->
+  <section class="bg-blue-600 text-white text-center py-20">
+
+    <h1 class="text-5xl font-bold mb-4">
+      Welcome To ShopHub
+    </h1>
+
+    <p class="text-xl">
+      Best Products At Best Prices
+    </p>
+
+  </section>
+
+  <!-- Categories -->
+  <section class="p-6">
+
+    <div class="flex gap-4 justify-center flex-wrap">
+
+      <button
+        class="categoryBtn bg-black text-white px-4 py-2 rounded"
+        data-category="all"
+      >
+        All
+      </button>
+
+      <button
+        class="categoryBtn bg-white text-black px-4 py-2 rounded"
+        data-category="men's clothing"
+      >
+        Men's
+      </button>
+
+      <button
+        class="categoryBtn bg-white text-black px-4 py-2 rounded"
+        data-category="women's clothing"
+      >
+        Women's
+      </button>
+
+      <button
+        class="categoryBtn bg-white text-black px-4 py-2 rounded"
+        data-category="electronics"
+      >
+        Electronics
+      </button>
+
+      <button
+        class="categoryBtn bg-white text-black px-4 py-2 rounded"
+        data-category="jewelery"
+      >
+        Jewelry
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Products -->
+  <section class="p-6">
+
+    <div
+      id="productContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <div class="bg-animation"></div>
+
+  <div class="container">
+
+    <h1>Weather App 🌤</h1>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div class="toggle">
+      <button onclick="setUnit('metric')">
+  °C
+</button>
+
+<button onclick="setUnit('imperial')">
+  °F
+</button>
+    </div>
+
+    <div class="weather-card" id="weatherCard">
+      <h2 id="cityName">--</h2>
+      <img id="weatherIcon" />
+      <h3 id="temp">--</h3>
+      <p id="desc">--</p>
+    </div>
+
+    <h2>7-Day Forecast</h2>
+    <div class="forecast" id="forecast"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

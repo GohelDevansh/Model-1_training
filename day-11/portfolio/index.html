@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Morgan — Frontend Developer</title>
+<meta name="description" content="Frontend Developer crafting beautiful, performant web experiences.">
+<meta property="og:title" content="Alex Morgan — Frontend Developer">
+<meta property="og:description" content="Frontend Developer crafting beautiful, performant web experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Toast -->
+<div class="toast" id="toast">Message sent! I'll get back to you soon.</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Alex<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#projects" class="mobile-link">Projects</a>
+  <a href="#experience" class="mobile-link">Experience</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- Hero -->
+<section id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-up">Available for work</div>
+        <h1 class="hero-title fade-up fade-up-delay-1">
+          Crafting digital
+          <em>experiences.</em>
+        </h1>
+        <p class="hero-subtitle fade-up fade-up-delay-2">
+          Frontend developer with 4 years of experience building fast, accessible, and beautiful web applications. I turn ideas into pixel-perfect products.
+        </p>
+        <div class="hero-cta fade-up fade-up-delay-3">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up fade-up-delay-2">
+        <div class="hero-photo-frame">
+          <div class="hero-photo">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="30" r="16" fill="white"/>
+              <ellipse cx="40" cy="66" rx="26" ry="18" fill="white"/>
+            </svg>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-num">4+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item">React</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Next.js</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">TypeScript</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Node.js</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Tailwind CSS</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">GraphQL</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">PostgreSQL</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Figma</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">AWS</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Docker</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">React</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Next.js</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">TypeScript</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Node.js</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Tailwind CSS</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">GraphQL</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">PostgreSQL</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Figma</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">AWS</span><span class="marquee-dot">·</span>
+    <span class="marquee-item">Docker</span><span class="marquee-dot">·</span>
+  </div>
+</div>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="section-label fade-up">About me</div>
+    <h2 class="section-title fade-up"><em>The person</em> behind the code</h2>
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p>Hi, I'm <strong>Alex Morgan</strong> — a frontend developer based in San Francisco. I specialise in building high-performance web applications with a focus on clean code, great UX, and accessible design.</p>
+        <p>I got into development by accident while studying design — I fell in love with the intersection of aesthetics and logic. Now I build products that are both beautiful and technically sound.</p>
+        <p>When I'm not pushing pixels, I'm hiking trails in Marin County, experimenting with film photography, or contributing to open-source projects.</p>
+        <div class="about-meta">
+          <div class="about-meta-item">
+            <div class="label">Location</div>
+            <div class="value">San Francisco, CA</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Availability</div>
+            <div class="value" style="color:var(--accent)">Open to work</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Focus</div>
+            <div class="value">Frontend / Fullstack</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Education</div>
+            <div class="value">B.Sc. Computer Science</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-skills fade-up fade-up-delay-1">
+        <h3>Technologies I work with</h3>
+        <div class="skill-group">
+          <div class="skill-group-label">Frontend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Tailwind</span>
+            <span class="skill-tag">Framer Motion</span>
+            <span class="skill-tag">Redux</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Backend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Prisma</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Tools & DevOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Vitest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="container">
+    <div class="projects-header">
+      <div>
+        <div class="section-label fade-up">Work</div>
+        <h2 class="section-title fade-up">Selected <em>projects</em></h2>
+      </div>
+      <div class="filter-btns fade-up" id="filterBtns">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="react">React</button>
+        <button class="filter-btn" data-filter="fullstack">Fullstack</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card fade-up" data-tags="react design">
+        <span class="featured-badge">Featured</span>
+        <div class="project-num">01</div>
+        <h3 class="project-title">Pulse Dashboard</h3>
+        <p class="project-desc">A real-time analytics dashboard for SaaS businesses. Features live charts, customisable widgets, and multi-team support with role-based access control.</p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Recharts</span>
+          <span class="project-tag">Tailwind</span>
+          <span class="project-tag">WebSocket</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-1" data-tags="fullstack react">
+        <div class="project-num">02</div>
+        <h3 class="project-title">Quill CMS</h3>
+        <p class="project-desc">A headless content management system with a custom rich-text editor, media library, and REST + GraphQL APIs. Powers three production websites.</p>
+        <div class="project-tags">
+          <span class="project-tag">Next.js</span>
+          <span class="project-tag">Node.js</span>
+          <span class="project-tag">PostgreSQL</span>
+          <span class="project-tag">GraphQL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-2" data-tags="design react">
+        <div class="project-num">03</div>
+        <h3 class="project-title">Forma UI Kit</h3>
+        <p class="project-desc">An open-source React component library with 40+ accessible components, dark mode support, full TypeScript types, and comprehensive Storybook docs.</p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">TypeScript</span>
+          <span class="project-tag">Storybook</span>
+          <span class="project-tag">Vitest</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up" data-tags="fullstack">
+        <div class="project-num">04</div>
+        <h3 class="project-title">TrailLog</h3>
+        <p class="project-desc">A hiking journal app with GPX track upload, interactive map visualisation, elevation profiles, and social sharing. 1,200+ active users.</p>
+        <div class="project-tags">
+          <span class="project-tag">Next.js</span>
+          <span class="project-tag">Mapbox</span>
+          <span class="project-tag">Supabase</span>
+          <span class="project-tag">Stripe</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-1" data-tags="design">
+        <div class="project-num">05</div>
+        <h3 class="project-title">Bloom Agency Site</h3>
+        <p class="project-desc">Marketing website for a creative agency — featuring WebGL hero animations, smooth page transitions, scroll-triggered effects, and a custom CMS backend.</p>
+        <div class="project-tags">
+          <span class="project-tag">Next.js</span>
+          <span class="project-tag">Three.js</span>
+          <span class="project-tag">GSAP</span>
+          <span class="project-tag">Sanity</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up fade-up-delay-2" data-tags="react fullstack">
+        <div class="project-num">06</div>
+        <h3 class="project-title">DevLink</h3>
+        <p class="project-desc">A developer networking platform with code snippet sharing, tech stack matching, and async collaboration tools. Built with a real-time notification system.</p>
+        <div class="project-tags">
+          <span class="project-tag">React</span>
+          <span class="project-tag">Firebase</span>
+          <span class="project-tag">Redis</span>
+          <span class="project-tag">Docker</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            Live demo
+          </a>
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label fade-up">Career</div>
+    <h2 class="section-title fade-up">Where I've <em>worked</em></h2>
+    <div class="experience-grid">
+      <div class="timeline fade-up">
+        <div class="timeline-item">
+          <div class="timeline-period">2022 — Present</div>
+          <div class="timeline-role">Senior Frontend Engineer</div>
+          <div class="timeline-company">Stripe</div>
+          <div class="timeline-desc">Lead development of the merchant dashboard. Reduced load time by 40% through code splitting and lazy loading. Mentoring 3 junior engineers.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-period">2020 — 2022</div>
+          <div class="timeline-role">Frontend Developer</div>
+          <div class="timeline-company">Notion</div>
+          <div class="timeline-desc">Built and maintained core editor features. Collaborated cross-functionally with design and product to ship the new template gallery.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-period">2019 — 2020</div>
+          <div class="timeline-role">Junior Web Developer</div>
+          <div class="timeline-company">Freelance</div>
+          <div class="timeline-desc">Delivered 12+ websites and web apps for small businesses and startups across the US and Europe.</div>
+        </div>
+      </div>
+      <div class="edu-col fade-up fade-up-delay-1">
+        <h3>Education & Certifications</h3>
+        <div class="edu-item">
+          <div class="edu-degree">B.Sc. Computer Science</div>
+          <div class="edu-school">UC Berkeley</div>
+          <div class="edu-year">2015 — 2019</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">AWS Certified Developer</div>
+          <div class="edu-school">Amazon Web Services</div>
+          <div class="edu-year">2022</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Google UX Design Certificate</div>
+          <div class="edu-school">Google / Coursera</div>
+          <div class="edu-year">2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label fade-up" style="justify-content:center">Get in touch</div>
+      <h2 class="section-title fade-up">Let's build something <em>together</em></h2>
+      <p class="fade-up">Whether you have a project in mind, a role to fill, or just want to say hello — my inbox is always open. I'll get back to you within 24 hours.</p>
+      <form class="contact-form fade-up" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-submit">Send Message →</button>
+        </div>
+      </form>
+      <div class="social-links fade-up">
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="#" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          Twitter
+        </a>
+        <a href="mailto:alex@example.com" class="social-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-text">© 2025 Alex Morgan. Designed & built with care.</div>
+      <a href="#home" class="footer-back">
+        Back to top
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

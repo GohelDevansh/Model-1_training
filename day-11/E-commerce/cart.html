@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Cart</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-6xl mx-auto p-6">
+
+    <h1 class="text-4xl font-bold mb-6">
+      Shopping Cart
+    </h1>
+
+    <div id="cartItems"></div>
+
+    <div class="bg-white p-6 rounded-xl shadow mt-6">
+
+      <h2 class="text-3xl font-bold">
+        Total:
+        $<span id="totalPrice">0</span>
+      </h2>
+
+      <a
+        href="checkout.html"
+        class="inline-block bg-black text-white px-6 py-3 rounded mt-4"
+      >
+        Checkout
+      </a>
+
+    </div>
+
+  </div>
+
+  <script src="cart.js"></script>
+
+</body>
+</html>
