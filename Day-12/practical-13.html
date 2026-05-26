@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Div Using jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .container {
+            width: 300px;
+            min-height: 150px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+            float: left;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container" id="parent1">
+    <h3>Parent 1</h3>
+
+    <div class="box" id="myDiv">
+        DIV
+    </div>
+</div>
+
+<div class="container" id="parent2">
+    <h3>Parent 2</h3>
+</div>
+
+<button id="moveBtn">Move Div</button>
+
+<script>
+$(document).ready(function(){
+
+    $("#moveBtn").click(function(){
+
+        
+        $("#myDiv").appendTo("#parent2");
+
+    });
+
+});
+</script>
+
+</body>
+</html>

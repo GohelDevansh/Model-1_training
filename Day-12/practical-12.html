@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zebra Stripe Table</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;   
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 3px solid black;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background: #dcdcdc;
+        }
+
+       
+        .odd-row {
+            background-color: #f2f2f2;
+        }
+
+        .even-row {
+            background-color: #cfe8ff;
+        }
+
+      
+        tr:hover {
+            background-color: #ffe082;
+        }
+    </style>
+</head>
+
+<body>
+
+<table id="studentTable">
+    <thead>
+        <tr>
+            <th>Sr.no</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Ravi</td>
+            <td>Computer Science</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Raju</td>
+            <td>Mechanical Engineering</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Babu</td>
+            <td>Information Technology</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Shyam</td>
+            <td>Chemical Engineering</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Raj</td>
+            <td>AI & MI</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+
+        
+        $("#studentTable tbody tr:odd").addClass("odd-row");
+        $("#studentTable tbody tr:even").addClass("even-row");
+
+    });
+</script>
+
+</body>
+</html>
