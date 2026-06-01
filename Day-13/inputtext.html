@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React Input Print</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel CDN -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body{
+      background: #e5e5e5;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .input-box{
+      width: 350px;
+      padding: 10px;
+      font-size: 20px;
+      border: 5px solid black;
+      outline: none;
+    }
+
+    .text{
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .btn{
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 20px;
+      border: 5px solid black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function App() {
+
+      const [text, setText] = React.useState("");
+
+      const handleChange = (event) => {
+        setText(event.target.value);
+      };
+
+      const resetText = () => {
+        setText("");
+      };
+
+      return (
+        <div>
+
+          <input
+            type="text"
+            placeholder="Enter text"
+            value={text}
+            onChange={handleChange}
+            className="input-box"
+          />
+
+          <div className="text">
+            You typed : {text}
+          </div>
+
+          <button onClick={resetText} className="btn">
+            Reset
+          </button>
+
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+  </script>
+
+</body>
+</html>

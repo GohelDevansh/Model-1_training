@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React Counter</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel CDN -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+    }
+
+    .box{
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      margin-bottom: 20px;
+    }
+
+    button{
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .increase{
+      background: blue;
+    }
+
+    .reset{
+      background: red;
+    }
+
+    .increase:hover{
+      background: darkblue;
+    }
+
+    .reset:hover{
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function Counter() {
+      const [count, setCount] = React.useState(0);
+
+      const handleCount = () => {
+        setCount(count + 1);
+      };
+
+      const resetCount = () => {
+        setCount(0);
+      };
+
+      return (
+        <div className="box">
+          <h1>Count: {count}</h1>
+
+          <button className="increase" onClick={handleCount}>
+            Increase
+          </button>
+
+          <button className="reset" onClick={resetCount}>
+            Reset
+          </button>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<Counter />);
+
+  </script>
+
+</body>
+</html>
